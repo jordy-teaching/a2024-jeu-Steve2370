@@ -50,4 +50,9 @@ public class FootprintGame extends Game {
         playerOne.draw(canvas);
         playerTwo.draw(canvas);
     }
+
+    @Override
+    protected void draw(Z_Fighter.Canvas canvas) {
+
+    }
 }

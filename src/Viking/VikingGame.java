@@ -94,4 +94,9 @@ public class VikingGame extends Game {
 //            player.draw(canvas);
 //        }
     }
+
+    @Override
+    protected void draw(Z_Fighter.Canvas canvas) {
+
+    }
 }

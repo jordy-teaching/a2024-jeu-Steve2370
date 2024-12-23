@@ -124,4 +124,11 @@ public class Screen {
         fullscreenDisplayMode = device.getDisplayMode();
         // windowedDisplayMode = device.getDisplayMode();
     }
+
+    public void setVisible(boolean b) {
+    }
+
+    public void show() {
+
+    }
 }

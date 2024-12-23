@@ -20,11 +20,31 @@ public abstract class StaticEntity {
         this.height = height;
     }
 
-    public boolean intersectWith(StaticEntity entity) {
-        return getBounds().intersects(entity.getBounds());
+    public Rectangle getCollisionBox() {
+        return new Rectangle(x, y, width, height);
     }
 
-    protected Rectangle getBounds() {
+    public boolean intersectWith(StaticEntity entity) {
+        return getCollisionBox().intersects(entity.getCollisionBox());
+    }
+
+    public void drawCollisionBox(Canvas canvas) {
+        Graphics2D g2d = (Graphics2D) canvas.getGraphics();
+
+        Color originalColor = g2d.getColor();
+        Stroke originalStroke = g2d.getStroke();
+
+        g2d.setColor(Color.RED);
+        g2d.setStroke(new BasicStroke(2));
+
+        Rectangle collisionBox = getCollisionBox();
+        g2d.drawRect(collisionBox.x, collisionBox.y, collisionBox.width, collisionBox.height);
+
+        g2d.setColor(originalColor);
+        g2d.setStroke(originalStroke);
+    }
+
+    public Rectangle getBounds() {
         return new Rectangle(x, y, width, height);
     }
 

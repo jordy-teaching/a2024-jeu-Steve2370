@@ -1,7 +1,7 @@
 package Doctrina;
 
 public abstract class ControllableEntity extends MovableEntity {
-    private final MovementController controller;
+    protected final MovementController controller;
 
     public ControllableEntity(MovementController controller) {
         this.controller = controller;

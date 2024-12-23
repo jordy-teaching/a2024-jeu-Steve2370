@@ -31,4 +31,9 @@ public final class BouncingBallGame extends Game {
         canvas.drawString(GameTime.getElapsedFormattedTime(), 10, 40, Color.WHITE);
         canvas.drawString("FPS: " + GameTime.getCurrentFps(), 10, 60, Color.WHITE);
     }
+
+    @Override
+    protected void draw(Z_Fighter.Canvas canvas) {
+
+    }
 }
