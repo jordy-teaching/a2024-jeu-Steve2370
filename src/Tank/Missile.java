@@ -13,7 +13,7 @@ public class Missile extends MovableEntity {
     public Missile(Tank tank) {
         tankDirection = tank.getDirection();
         initialize(tank);
-        CollidableRepository.getInstance().registerEntity(this);
+//        CollidableRepository.getInstance().registerEntity(this);
     }
 
     private void initialize(Tank tank) {

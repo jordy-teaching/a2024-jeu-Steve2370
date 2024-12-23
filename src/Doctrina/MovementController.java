@@ -9,11 +9,21 @@ public class MovementController extends Controller {
     private int leftKey = KeyEvent.VK_LEFT;
     private int rightKey = KeyEvent.VK_RIGHT;
 
+//    private int iaRightKey = KeyEvent.VK_D;
+//    private int iaLeftKey = KeyEvent.VK_A;
+//    private int iaUpKey = KeyEvent.VK_W;
+//    private int iaDownKey = KeyEvent.VK_S;
+
     public MovementController() {
         bindKey(upKey);
         bindKey(downKey);
         bindKey(leftKey);
         bindKey(rightKey);
+
+//        bindKey(iaUpKey);
+//        bindKey(iaDownKey);
+//        bindKey(iaLeftKey);
+//        bindKey(iaRightKey);
     }
 
     public void useWasdKeys() {
@@ -39,6 +49,22 @@ public class MovementController extends Controller {
         return null;
     }
 
+//    public Direction getDirection2() {
+//        if (isIaLeftPressed()) {
+//            return Direction.LEFT;
+//        }
+//        if (isIaRightPressed()) {
+//            return Direction.RIGHT;
+//        }
+//        if (isIaUpPressed()) {
+//            return Direction.UP;
+//        }
+//        if (isIaDownPressed()) {
+//            return Direction.DOWN;
+//        }
+//        return null;
+//    }
+
     public boolean isLeftPressed() {
         return isKeyPressed(leftKey);
     }
@@ -56,9 +82,24 @@ public class MovementController extends Controller {
     }
 
     public boolean isMoving() {
-        return isDownPressed() || isUpPressed()
-                || isLeftPressed() || isRightPressed();
+        return isRightPressed() || isLeftPressed() || isUpPressed() || isDownPressed();
     }
+
+//    public boolean isIaLeftPressed() {return isKeyPressed(iaLeftKey);}
+//
+//    public boolean isIaRightPressed() {return isKeyPressed(iaRightKey);}
+//
+//    public boolean isIaDownPressed() {return isKeyPressed(iaDownKey);}
+//
+//    public boolean isIaUpPressed() {return isKeyPressed(iaUpKey);}
+
+//    public boolean isIaMoving() {
+//        return isIaRightPressed() || isIaLeftPressed() || isIaUpPressed() || isIaDownPressed();
+//    }
+
+
+
+
 
     public void setDownKey(int keyCode) {
         unbindKey(downKey);

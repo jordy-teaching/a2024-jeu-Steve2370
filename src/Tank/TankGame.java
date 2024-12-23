@@ -76,4 +76,9 @@ public class TankGame extends Game {
             brick.draw(canvas);
         }
     }
+
+    @Override
+    protected void draw(Z_Fighter.Canvas canvas) {
+
+    }
 }

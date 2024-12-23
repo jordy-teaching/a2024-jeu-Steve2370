@@ -35,4 +35,6 @@ public abstract class Game {
         }
         renderingEngine.stop();
     }
+
+    protected abstract void draw(Z_Fighter.Canvas canvas);
 }

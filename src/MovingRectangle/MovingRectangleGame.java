@@ -34,4 +34,9 @@ public class MovingRectangleGame extends Game {
         player.draw(canvas);
         npc.draw(canvas);
     }
+
+    @Override
+    protected void draw(Z_Fighter.Canvas canvas) {
+
+    }
 }
