@@ -12,6 +12,8 @@ import java.awt.*;
 import java.util.Random;
 import java.util.Scanner;
 
+import static java.awt.Color.BLUE;
+
 public class Z_Fighter_Game extends Game {
 
     private GamePad gamePad;
@@ -74,9 +76,34 @@ public class Z_Fighter_Game extends Game {
         return choix;
     }
 
+    public static void displayNameGame() {
+        System.out.println("8888888888P                                            \n" +
+                "      d88P                                             \n" +
+                "     d88P                                              \n" +
+                "    d88P                                               \n" +
+                "   d88P                                                \n" +
+                "  d88P                                                 \n" +
+                " d88P                                                  \n" +
+                "d8888888888                                            \n" +
+                "                                                       \n" +
+                "                                                       \n" +
+                "                                                       \n" +
+                "8888888888 d8b          888      888                   \n" +
+                "888        Y8P          888      888                   \n" +
+                "888                     888      888                   \n" +
+                "8888888    888  .d88b.  88888b.  888888 .d88b.  888d888\n" +
+                "888        888 d88P\"88b 888 \"88b 888   d8P  Y8b 888P\"  \n" +
+                "888        888 888  888 888  888 888   88888888 888    \n" +
+                "888        888 Y88b 888 888  888 Y88b. Y8b.     888    \n" +
+                "888        888  \"Y88888 888  888  \"Y888 \"Y8888  888    \n" +
+                "                    888                                \n" +
+                "               Y8b d88P                                \n" +
+                "                \"Y88P\"");
+    }
+
     private void displayMainMenu() {
         Scanner scanner = new Scanner(System.in);
-
+        displayNameGame();
         System.out.println("Choisissez votre mode de jeu :");
         System.out.println("1. You vs Computer");
         System.out.println("2. You vs Player 2");
@@ -112,7 +139,7 @@ public class Z_Fighter_Game extends Game {
         }
         RenderingEngine.getInstance().getScreen().setSize(800, 600);
         RenderingEngine.getInstance().getScreen().show();
-        RenderingEngine.getInstance().getScreen().hideCursor();
+        RenderingEngine.getInstance().getScreen().fullscreen();
     }
 
     private void displayCharacterSelection(boolean isAI) {
